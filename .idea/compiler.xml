@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="provider_8003" />
+        <module name="provider_8002" />
+        <module name="hystrix_consumer_9002" />
+        <module name="hystrix_provider_8004" />
+        <module name="ribbon_consumer_80" />
+        <module name="provider_8001" />
+        <module name="eureka_7001" />
+        <module name="eureka_7002" />
+        <module name="eureka_7003" />
+        <module name="config_client_3355" />
+        <module name="config_client_3366" />
+        <module name="gateway_9527" />
+        <module name="openfeign_consumer" />
+        <module name="common_sub_module" />
+        <module name="config_center_3344" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="micro-service-cloud-api" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="common_sub_module" options="-parameters" />
+      <module name="config_center_3344" options="-parameters" />
+      <module name="config_client_3355" options="-parameters" />
+      <module name="config_client_3366" options="-parameters" />
+      <module name="eureka_7001" options="-parameters" />
+      <module name="eureka_7002" options="-parameters" />
+      <module name="eureka_7003" options="-parameters" />
+      <module name="gateway_9527" options="-parameters" />
+      <module name="hystrix_consumer_9002" options="-parameters" />
+      <module name="hystrix_provider_8004" options="-parameters" />
+      <module name="openfeign_consumer" options="-parameters" />
+      <module name="provider_8001" options="-parameters" />
+      <module name="provider_8002" options="-parameters" />
+      <module name="provider_8003" options="-parameters" />
+      <module name="ribbon_consumer_80" options="-parameters" />
+    </option>
+  </component>
+</project>

@@ -1,0 +1,9 @@
+项目参考：http://c.biancheng.net/springcloud
+
+有时候application.yml运行报错进setting--editor--file encoding设置编码为UTF8，删除重新创建，或者增加依赖：
+<dependency>
+    <groupId>org.yaml</groupId>
+    <artifactId>snakeyaml</artifactId>
+    <version>1.27</version>
+</dependency>
+

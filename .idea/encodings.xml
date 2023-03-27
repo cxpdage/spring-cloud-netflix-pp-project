@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/common_sub_module/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/config_center_3344/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/config_client_3355/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/config_client_3366/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/config_client_3366/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/eureka_7001/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/eureka_7002/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/eureka_7003/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gateway_9527/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/hystrix_consumer_9002/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/hystrix_provider_8004/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/openfeign_consumer/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/provider_8001/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/provider_8002/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/provider_8003/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ribbon_consumer_80/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
+  </component>
+</project>

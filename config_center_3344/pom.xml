@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>config_center_3344</artifactId>
+    <description>分布式配置组件（统一管理配置的文件）</description>
+
+    <parent>
+        <groupId>org.pp</groupId>
+        <artifactId>spring-cloud-netflix-pp-project</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+        </dependency>
+
+        <!--配置中心服务器依赖-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-config-server</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+        </dependency>
+
+        <!--RabbitMQ 为例，来演示如何使用 Config+Bus 实现配置的动态刷新 start-->
+        <!--目前 Spring Cloud Bus 支持两种消息代理：RabbitMQ 和 Kafka。-->
+        <!--windows下rabbitmq安装：
+        https://blog.csdn.net/weixin_43344151/article/details/123784262
+        https://blog.csdn.net/chencong2005100/article/details/117478358
+        https://blog.csdn.net/qq_25919879/article/details/113055350-->
+        <!--解决RabbitMQ在windows下安装出现的 TCP connection succeeded but Erlang distribution failed问题
+        https://blog.csdn.net/xwnxwn/article/details/83036558/
+
+        处理完之后如果http://localhost:15672/不能访问，进C:\Users\xxx\AppData\Roaming\RabbitMQ\log 目录下的日志删了重新启动
+        -->
+        <!--添加消息总线（Bus）对 RabbitMQ 的支持-->
+
+        <!-- 测试：命令行窗口
+                curl -X POST "http://localhost:3344/actuator/bus-refresh" //全部的config_client通知
+                curl -X POST "http://localhost:3344/actuator/bus-refresh/config-client:3355" //定点通知(config-client是3355中设置的spring.application.name)
+        -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-bus-amqp</artifactId>
+        </dependency>
+        <!--添加Spring Boot actuator 监控模块的依赖-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+        <!--RabbitMQ 为例，来演示如何使用 Config+Bus 实现配置的动态刷新 end-->
+    </dependencies>
+</project>
+
